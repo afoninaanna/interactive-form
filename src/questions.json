@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "title": "Title string",
+        "title": "Title string 1",
         "content": null,
         "actions": [
             {
@@ -28,7 +28,7 @@
     },
     {
         "id": 2,
-        "title": "Title string",
+        "title": "Title string 2",
         "content": null,
         "actions": [
             {
@@ -55,7 +55,7 @@
     },
     {
         "id": 3,
-        "title": "Title string",
+        "title": "Title string 3",
         "content": "Content string",
         "actions": [
             {
@@ -95,14 +95,14 @@
     },
     {
         "id": 4,
-        "title": "Title string",
+        "title": "Title string 4",
         "content": "Content string",
         "actions": [
             {
                 "id": 1,
                 "title": "Yes",
                 "result": "y",
-                "nextStepId": [
+                "nextStep": [
                     {
                         "id": 5
                     }
@@ -112,7 +112,7 @@
     },
     {
         "id": 5,
-        "title": "Title string",
+        "title": "Title string 5",
         "content": "Content string"
     }
 ]

@@ -5,9 +5,6 @@ import App from './App';
 import questions from './questions.json';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-export const MyContext = React.createContext();
 root.render(
-    <MyContext.Provider value={questions}>
-        <App />
-    </MyContext.Provider>
+    <App questions={questions}/>
 );

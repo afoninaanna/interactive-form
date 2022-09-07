@@ -1,22 +1,18 @@
-import { useState } from 'react';
 import Button from '../Button/Button';
 import Step from '../Step/Step';
 import './style.css';
-function QuestionContainer(props) {
-    const [num, setNum] = useState(1);
-    const onButtonClick = () => {
-        if(num < props.questions.length){
-            setNum(num + 1);
-        }
-    }
+function QuestionContainer({ question, onButtonClick }) { 
+    const buttons = question.actions?.map((action, indexOfBtn) => { //добавить key
+        let isActive = (action.title === 'Yes') ? true : false;
+        return <Button onClick={() => onButtonClick(indexOfBtn, action.result)} title={action.title} className={isActive? 'Button yes': 'Button'}/>
+    });
     return (
         <div className='QuestionContainer'>
-            <Step className='step-circle number' number={num}/>
-            <h3>Текст вопроса?</h3>
-            <div className='content'>Контент</div>
+            <Step className='step-circle number' number={question.id}/>
+            <h3>{question.title}</h3>
+            <div className='content'>{question.content}</div>
             <div className='btn-container'>
-                <Button onClick={onButtonClick}/>
-                <Button />
+                {buttons}
             </div>
         </div>
     );
