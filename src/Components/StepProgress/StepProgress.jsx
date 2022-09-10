@@ -1,12 +1,12 @@
 import Step from '../Step/Step';
 import './style.css';
 
-function StepProgress({ questions}) {
-    const stepElements = questions.map((elem) => {
+function StepProgress({ questions, isAgree}) {
+    const stepElements = questions.map((elem, index) => {
         if(elem.id < questions.length){
-            return (<Step number={elem.id} className='step-circle line'/>);
+            return (<Step key={index} number={elem.id} className={`step-circle line`}/>);
         } else {
-            return (<Step number={elem.id} className='step-circle' />);
+            return (<Step key={index} number={elem.id} className={'step-circle'} />);
         }
     });
     return (

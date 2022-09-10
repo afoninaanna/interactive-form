@@ -2,7 +2,7 @@
     {
         "id": 1,
         "title": "Title string 1",
-        "content": null,
+        "content": "<a href='#'><li>test data</li></a>",
         "actions": [
             {
                 "id": 1,
@@ -68,11 +68,11 @@
                         "conditions": [
                             {
                                 "id": 1,
-                                "result": "y"
+                                "result": "n"
                             },
                             {
                                 "id": 2,
-                                "result": "y"
+                                "result": "n"
                             }
                         ]
                     },
