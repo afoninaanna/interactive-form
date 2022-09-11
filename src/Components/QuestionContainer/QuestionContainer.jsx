@@ -4,8 +4,8 @@ import Step from '../Step/Step';
 import './style.css';
 function QuestionContainer({ question, onButtonClick }) {
     const buttons = question.actions?.map((action, indexOfBtn) => { 
-        let isActive = (action.title === 'Yes') ? true : false;
-        return <Button key={indexOfBtn} onClick={() => onButtonClick(indexOfBtn, action.result)} title={action.title} className={isActive? 'Button yes': 'Button'}/>
+        let isActive = (action.title === 'Yes') ? 'Button yes' : 'Button';
+        return <Button key={indexOfBtn} onClick={() => onButtonClick(indexOfBtn, action.result)} title={action.title} className={isActive}/>
     });
     return (
         <div className='QuestionContainer'>

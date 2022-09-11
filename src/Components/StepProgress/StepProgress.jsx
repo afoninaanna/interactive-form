@@ -3,11 +3,8 @@ import './style.css';
 
 function StepProgress({ questions, isAgree}) {
     const stepElements = questions.map((elem, index) => {
-        if(elem.id < questions.length){
-            return (<Step key={index} number={elem.id} className={`step-circle line`}/>);
-        } else {
-            return (<Step key={index} number={elem.id} className={'step-circle'} />);
-        }
+        let line = (elem.id < questions.length)? 'line': '';
+        return (<Step key={index} number={elem.id} className={`step-circle ${line}`} />);
     });
     return (
         <div className="StepProgress">
