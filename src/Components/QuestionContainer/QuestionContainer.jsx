@@ -9,7 +9,7 @@ function QuestionContainer({ question, onButtonClick }) {
     });
     return (
         <div className='QuestionContainer'>
-            <Step className='step-circle number' number={question.id}/>
+            <Step className='number' number={question.id}/>
             <h3>{question.title}</h3>
             <div className='content' dangerouslySetInnerHTML={{ __html: question.content }}></div>
             <div className='btn-container'>

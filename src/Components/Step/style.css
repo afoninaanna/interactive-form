@@ -1,31 +1,27 @@
 .step-circle{
     background-color: #445dda;
     width: 60px;
-    border-radius: 50px;
+    border-radius: 60px;
     margin: 50px 29px;
     text-align: center;
     line-height: 60px;
+    height: 60px;
     color: #fff;
+    position: relative;
+    left: 50%;
 
 }
 .step-circle span{
     display: inline-block;
     vertical-align: middle;
 }
-.line:after {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    width: 100%;
-    height: 12px;
-    background-color: #445dda;
-    position: relative;
-    margin-right: -100%;
-    right: -25px;
-}
 .step-yes{
     background-color: darkgreen;
 }
 .step-no{
     background-color: brown;
+}
+.step-current{
+   width: 65px;
+   height: 65px;
 }
